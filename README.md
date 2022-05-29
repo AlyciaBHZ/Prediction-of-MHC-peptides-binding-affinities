@@ -1,7 +1,7 @@
 # Prediction-of-MHC-peptides-binding-affinities
 
 ## 环境配置：
-## The project is developed under Linux environment with:
+### The project is developed under Linux environment with:
 Cuda 10.2
 python 3.9
 numpy latest version
@@ -11,17 +11,17 @@ torch 1.10.0
 
 # 节点特征训练 
 
-## pssm模型训练
+### pssm模型训练
 '''
 psiblast -query ./fasta/iedb00003.fasta -db uniprot_sprot.fasta -num_iterations 3 -out_ascii_pssm ./pssm/iedb00003.pssm
 '''
 
-## dssp模型训练
+### dssp模型训练
 '''
 dssp -i ./pdb/paper0001.pdb -o ./data/dssp/paper0001.dssp
 '''
 
-# Distance Map 生成
+# 邻接矩阵和Distance Map 生成
 '''
 python map.py -n 0001 -f /home/ubuntu/deeprank/8000/paper0001.pdb
 '''
