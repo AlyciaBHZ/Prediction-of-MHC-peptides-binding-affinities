@@ -21,12 +21,12 @@ psiblast -query ./fasta/iedb00003.fasta -db uniprot_sprot.fasta -num_iterations 
 dssp -i ./pdb/paper0001.pdb -o ./data/dssp/paper0001.dssp
 ~~~
 
-# 邻接矩阵和Distance Map 生成
+## 邻接矩阵和Distance Map 生成
 ~~~
 python map.py -n 0001 -f /home/ubuntu/pdb/paper0001.pdb  
 ~~~
 -n :自定义传入文件命名。也可以使用-p 引用PDB id, -f自定义输入的蛋白路径
 <br>
 
-## 处理特征 
+## 特征处理 
 在dataset-example中查看将上述三种特征normalized并转化为.npy格式的实现
